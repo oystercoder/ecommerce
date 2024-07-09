@@ -6,7 +6,7 @@ import { LiaMoneyBillSolid } from "react-icons/lia";
 
 const Values = () => {
   return (
-    <section className="self-stretch bg-white flex flex-row flex-wrap items-start justify-center py-12 px-40 gap-[24px] text-left text-xl text-neutral-07-100 font-caption-2-bold mq750:pl-20 mq750:pr-20 mq750:box-border mq450:pl-5 mq450:pr-5 mq450:box-border">
+    <section className="self-stretch bg-white flex flex-row flex-wrap items-start justify-center py-12 px-40 gap-[24px] text-left text-xl text-neutral-07-100 font-caption-2-bold md:pl-20 mq750:pr-20 mq750:box-border mq450:pl-5 mq450:pr-5 mq450:box-border">
       <Card
         shippingAndDeliveryoutlin={<CiDeliveryTruck className="text-15xl" />}
         freeShipping="Free Shipping"

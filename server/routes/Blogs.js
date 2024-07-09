@@ -1,11 +1,12 @@
 import express from 'express';
-import Blog from '../models/blogModel.js'; // Adjust the path as per your project structure
+import Blog from '../models/blogModel.js';
+import verifyToken from '../middleware/VerifyToken.js'; // Adjust the path as per your project structure
 
 const router = express.Router();
 
 // Route: POST /blogs
 // Create a new blog entry
-router.post('/blog', async (req, res) => {
+router.post('/blog',async (req, res) => {
     try {
         const { title, author, date, content, image } = req.body;
 
@@ -41,18 +42,18 @@ router.get('/blog', async (req, res) => {
 });
 export {router as allblogRoute};
 
- export const verifyToken=(req,res,next)=>{
-            const token=req.headers.authorization;
-            if(token){
-                jwt.verify(token,"secret",(err)=>{
-                if(err)return res.status(403).json({message:"invalid token"})
-                next()
+//  export const verifyToken=(req,res,next)=>{
+//             const token=req.headers.authorization;
+//             if(token){
+//                 jwt.verify(token,"secret",(err)=>{
+//                 if(err)return res.status(403).json({message:"invalid token"})
+//                 next()
                 
                 
-            })
-        }
-            else{
-                return res.status(401).json({message:"no token provided"})
-            }
+//             })
+//         }
+//             else{
+//                 return res.status(401).json({message:"no token provided"})
+//             }
             
-        }
+//         }

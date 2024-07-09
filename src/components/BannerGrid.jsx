@@ -1,6 +1,7 @@
 import ElementsCard from "./ElementCard";
 import kitchen from '../assets/kitchen.png'
 import arrow from '../assets/arrow-right.png'
+import { Link } from "react-router-dom";
 
 const BannerGrid = () => {
   return (
@@ -23,7 +24,9 @@ const BannerGrid = () => {
           <button className="cursor-pointer [border:none] p-0 bg-[transparent] flex flex-row items-center justify-start gap-[4px] border-b-[1px] border-solid border-neutral-07-100">
             <div className="flex flex-row items-center justify-start">
               <div className="relative text-base tracking-[-0.4px] leading-[28px] font-medium font-caption-1 text-neutral-07-100 text-left inline-block min-w-[76px]">
+                <Link to="/shop" >
                 Shop Now
+                </Link>
               </div>
             </div>
             <img

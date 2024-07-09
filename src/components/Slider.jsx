@@ -202,13 +202,13 @@ const MySlider = () => {
 
   return (
     <>
-     <div className='mx-28 pr-10 min-w-full  min-h-full sm:mx-12 md:px-12 lg:mx-32'>
+     <div className=' min-w-full  min-h-full px-4'>
    
       <Slider {...settings}>
        
-        <img className=" w-[311px] h-[304px] md:w-[1120px] md:h-[536px] " src={slider} alt="Slider Image 1" />
-        <img className="w-[311px] h-[304px]  md:w-[1120px] md:h-[536px]  " src={slider} alt="Slider Image 2" />
-        <img className="w-[311px] h-[304px] md:w-[1120px] md:h-[536px] " src={slider} alt="Slider Image 3" />
+        <img className=" w-min-full h-[304px] md:w-min-full md:h-[536px] " src={slider} alt="Slider Image 1" />
+        <img className="w-min-full h-[304px]  md:w-[1120px] md:h-[536px]  " src={slider} alt="Slider Image 2" />
+        <img className="w-min-full h-[304px] md:w-[1120px] md:h-[536px] " src={slider} alt="Slider Image 3" />
        
       </Slider>
       </div>
@@ -226,10 +226,10 @@ const MySlider = () => {
       </h1>
     <div className="w-[453px] flex flex-col items-start justify-start pt-[50px] px-0 pb-0 box-border min-w-[453px] max-w-full text-base text-darkslategray-200 font-caption-1 mq750:min-w-full mq1050:flex-1">
         <div className="self-stretch flex flex-row items-start justify-start py-0 pr-[29px] pl-0 box-border max-w-full">
-         <div className="flex-1 relative leading-[26px] inline-block max-w-full">
+         {/* <div className="flex-1 relative leading-[26px] inline-block max-w-full">
             <span className="font-semibold">{`3legant `}</span>
             <span className="text-neutral-04-100">{`is a gift & decorations store based in HCMC, Vietnam. Est since 2019. `}</span>
-</div>
+</div> */}
         </div>
       </div>
     </div>

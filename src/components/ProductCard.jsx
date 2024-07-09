@@ -37,9 +37,9 @@ const ProductCard = ({
     //   </div>
       <div className="self-stretch flex flex-col items-start justify-start text-left text-neutral-07-100">
         <div className="self-stretch flex flex-col items-start justify-start gap-[4px]">
-          <section className="flex flex-row">
+          <section className="flex flex-row ml-[200px]">
         <button className="m-3 flex flex-col top-0 cursor-pointer py-1 px-3.5 bg-white rounded flex flex-row items-start justify-start hover:bg-gainsboro">
-           <b className="relative text-base  uppercase inline-block font-caption-1 text-neutral-07-100 text-center min-w-[39px]">
+           <b className="relative text-base uppercase inline-block font-caption-1 text-neutral-07-100 text-center min-w-[39px]">
              NEW
            </b>
          

@@ -23,7 +23,7 @@ const Blog = () => {
     <img className='pr-[160px] pl-[160px]' src={blog} />
     <div>
             <h1>Blog Posts</h1>
-            <ul>
+            <ul className=''>
                 {blogs.map((blog) => (
                     <li key={blog._id}>
                         <h2>{blog.title}</h2>

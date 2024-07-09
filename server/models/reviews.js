@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const signupSchema = new mongoose.Schema({
+const reviewSchema = new mongoose.Schema({
    rating:{
     type: Number,
     required: true,
@@ -11,10 +11,22 @@ const signupSchema = new mongoose.Schema({
    review:{
     type: String,
     required: true,
-    
-   }
+
+   },
+   likes:{
+      type: Number,
+      default: 0,
+      required:false
+   },
+   replies: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Reply'
+      }
+    ]
+
 });
 
-const Signup = mongoose.model('Signup', signupSchema);
+const Review = mongoose.model('Review',reviewSchema);
 
-export default Signup;
+export default Review;

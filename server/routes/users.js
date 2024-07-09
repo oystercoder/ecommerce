@@ -91,6 +91,7 @@ import Account from '../models/update.js'
 
 router.post('/signup', async (req, res) => {
     const { name, phone, email, password } = req.body;
+    console.log(phone)
     if (!name || !phone || !email || !password) {
         return res.status(400).json({ message: 'Please fill all the fields!' });
     }
@@ -144,6 +145,7 @@ export {router as userRouter}
 // PATCH /account/password - Update user password
 router.patch('/signup', async (req, res) => {
     const { name,phone,email, newpassword, repeatpassword } = req.body;
+    console.log(phone)
     if(!name||!phone||!email||!newpassword||!repeatpassword)
         {
             return res.status(400).json({ message: "All fields are required" });
@@ -159,12 +161,12 @@ router.patch('/signup', async (req, res) => {
 
         // Find user by email
         let user = await Signup.findOne({ email });
-        let phone = await Signup.findOne({ phone });
+        let  phoney = await Signup.findOne({ phone });
 
         if (!user) {
             return res.status(404).json({ message: 'User not found ,Register first' });
         }
-        if (!phone) {
+        if (!phoney) {
             return res.status(404).json({ message: 'User not found ,Register first' });
         }
 

@@ -4,6 +4,7 @@ import mongoose from 'mongoose'
 import { userRouter } from './routes/users.js';
 import { signinRouter } from './routes/Signin.js';
 import { blogRouter } from './routes/Blogs.js';
+import { allreviewRouter, reviewRouter } from './routes/reviews.js';
 // import { updateRouter } from './routes/Update.js';
 // import {userRouter} from './routes/users.js'
 // import {recipesRouter} from './routes/recipes.js'
@@ -15,6 +16,8 @@ app.use(cors())
   app.use('/auth',signinRouter)
 
   app.use('/',blogRouter)
+  app.use('/',reviewRouter)
+  app.use('/',allreviewRouter)
 
   
 

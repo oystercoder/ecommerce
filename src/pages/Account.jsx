@@ -229,17 +229,47 @@ const Account = () => {
      Change Password
 
     </div>
-        <label className='mb-2 ml-[350px] md:ml-0'>NEW PASSWORD</label>
-        <input value={newpassword} onChange={(e) => setnewpassword(e.target.value)} className='mb-3  w-[312px] h-[40px] ml-[350px] md:w-[707px] md:ml-0 md:h-[40px] border border-gray-300 mr-96 md:mb-4' type="text" placeholder='NEW PASSWORD' />
+        {/* <label className='mb-2 ml-[350px] md:ml-0'>NEW PASSWORD</label>
+        <input value={newpassword} type="password" onChange={(e) => setnewpassword(e.target.value)} className='mb-3  w-[312px] h-[40px] ml-[350px] md:w-[707px] md:ml-0 md:h-[40px] border border-gray-300 mr-96 md:mb-4' type="text" placeholder='NEW PASSWORD' /> */}
+
+<input 
+    id="newpassword"
+    type="password" 
+    value={newpassword} 
+    onChange={(e) => setnewpassword(e.target.value)} 
+    className='mb-3 w-[312px] ml-[350px] h-[40px] md:ml-0 md:w-[707px] md:h-[40px] border border-gray-300 md:mb-8 px-3 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500'
+    placeholder=' NEW PASSWORD' 
+  />
+
+
     </div>
-    <div className='flex flex-col'>
+    {/* <div className='flex flex-col'>
         <label className='mb-2 ml-[350px] md:ml-0'>REPEAT NEW PASSWORD</label>
-        <input value={repeatpassword} onChange={(e) => setrepeatpassword(e.target.value)} className='mb-3  w-[312px] ml-[350px] h-[40px] md:ml-0 md:w-[707px] md:h-[40px] border border-gray-300 mr-96 md:mb-8' type="text" placeholder='REPEAT NEW PASSWORD' />
+        <input value={repeatpassword} type="password" onChange={(e) => setrepeatpassword(e.target.value)} className='mb-3  w-[312px] ml-[350px] h-[40px] md:ml-0 md:w-[707px] md:h-[40px] border border-gray-300 mr-96 md:mb-8' type="text" placeholder='REPEAT NEW PASSWORD' />
         <button onClick={handle} className='ml-[500px] md:ml-0 bg-black text-white w-[183px] h-[52px] mb-16'>
         Save Changes
     </button>
 
-    </div>
+    </div> */}
+
+<div className='flex flex-col'>
+  <label htmlFor="repeatPassword" className='mb-2 ml-[350px] md:ml-0'>REPEAT NEW PASSWORD</label>
+  <input 
+    id="repeatPassword"
+    type="password" 
+    value={repeatpassword} 
+    onChange={(e) => setrepeatpassword(e.target.value)} 
+    className='mb-3 w-[312px] ml-[350px] h-[40px] md:ml-0 md:w-[707px] md:h-[40px] border border-gray-300 md:mb-8 px-3 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500'
+    placeholder='REPEAT NEW PASSWORD' 
+  />
+  <button 
+    onClick={handle} 
+    className='ml-[500px] md:ml-0 bg-black text-white w-[183px] h-[52px] mb-16'
+  >
+    Save Changes
+  </button>
+</div>
+
     
 
 </form>
